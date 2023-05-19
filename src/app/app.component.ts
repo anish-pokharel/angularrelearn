@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Chart } from 'angular-highcharts';
+
 // import * as alertify from 'alertifyjs'
 
 @Component({
@@ -7,6 +9,67 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+
+  title: any;
+  lineChart = new Chart({
+    chart: {
+      type: 'line'
+    },
+    title: {
+      text: 'Patient'
+    },
+    credits: {
+      enabled: false
+    },
+    series: [
+      {
+        name: 'Patients admitted',
+        data: [10, 2, 3, 6, 9, 17, 20, 5, 2, 16]
+      } as any
+    ]
+  })
+  pieChart = new Chart({
+    chart: {
+      type: 'pie',
+      plotShadow: false,
+    },
+    credits: {
+      enabled: false,
+    }, plotOptions: {
+      pie: {
+        innerSize: '99%',
+        borderWidth: 10,
+        borderColor: '',
+        slicedOffset: 10,
+        dataLabels: {
+          connectorWidth: 0,
+        },
+      },
+    },
+    title: {
+      verticalAlign: 'middle',
+      floating: true,
+      text: 'Diseases',
+    },
+
+    legend: {
+      enabled: false,
+    },
+    series: [
+      {
+        type: 'pie',
+        data: [
+          { name: 'COVID 19', y: 2, color: '#eeeeee' },
+
+          { name: 'HIV/AIDS', y: 2, color: '#393e46' },
+
+          { name: 'EBOLA', y: 3, color: '#00adb5' },
+          { name: 'DISPORA', y: 4, color: '#eeeeee' },
+          { name: 'DIABETES', y: 2, color: '#506ef9' },
+        ],
+      },
+    ],
+  })
   // title = 'relearn';
   // states: Array<String> = ['kathmandu', 'lalitpur ', 'bhaktapur'];
   // user = { 'fname': 'anish', 'lname': 'pokharel' };

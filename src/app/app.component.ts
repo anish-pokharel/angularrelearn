@@ -11,11 +11,22 @@ import { Chart } from 'angular-highcharts';
 export class AppComponent implements OnInit {
 
   title: any;
-  // lineChart1=new Chart ({
-  //   chart:{
-  //     type:line
-  //   }
-  // })
+  lineChart1 = new Chart({
+    chart: {
+      type: 'line'
+    },
+    title: {
+      text: 'Patient'
+    },
+    credits: {
+      enabled: false
+    },
+    series: [{
+      name: 'Graph hai ',
+      data: [20, 30, 21, 54, 212, 12, 43, 54, 65, 67, 98]
+    } as any
+    ]
+  })
   lineChart = new Chart({
     chart: {
       type: 'line'

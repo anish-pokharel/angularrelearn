@@ -11,6 +11,11 @@ import { Chart } from 'angular-highcharts';
 export class AppComponent implements OnInit {
 
   title: any;
+  // lineChart1=new Chart ({
+  //   chart:{
+  //     type:line
+  //   }
+  // })
   lineChart = new Chart({
     chart: {
       type: 'line'

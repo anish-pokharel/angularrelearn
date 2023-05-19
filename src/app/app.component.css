@@ -1,0 +1,11 @@
+.charts {
+    display: flex;
+}
+
+.pie {
+    flex: 1;
+}
+
+.line {
+    flex: 1;
+}

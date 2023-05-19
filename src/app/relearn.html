@@ -1,0 +1,319 @@
+<!-- <div class="row">
+  <form action="" style="width: 100" #myForm="ngForm">
+    ] first we need to add ngForm in form and we should bind with tempate refrence variable  -->
+<!-- <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="fnText">First Name</label> -->
+
+<!-- [(ngModel)]="user.fname" 
+        [(ngmodel)] it is 2 way binding
+        [] single binding 
+        'is-invalid':
+        myForm.get('firstName').invalid &&
+        myForm.get('firstName').touched
+        'is-invalid': !myForm.form.controls.firstName?.valid
+        'is-invalid':
+          myForm.form.controls.firstName.invalid &&
+          (firstName.dirty || firstName.touched)
+      -->
+<!-- <input
+            type="text"
+            ngModel
+            name="firstName "
+            [ngClass]="{
+              'form-control': true
+            }"
+            required
+            minlength="2"
+            id="fnText"
+            placeholder="Enter First Name"
+          /> -->
+<!-- we put ngModel in input Tag and give name 
+            ngModel
+            name="firstName "
+            -->
+<!-- <small id="fnHelp" class="form-text custom-invalid-feedback"
+            >Field is required</small
+          >
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="lnText">First Name</label>
+          <input
+            type="text"
+            ngModel
+            name="lastName"
+            class="form-contol"
+            id="lnText"
+            [(ngModel)]="user.lname"
+            placeholder="Enter Last  Name"
+          />
+          <small id="fnHelp" class="form-text custom-invalid-feedback"
+            >Field is required</small
+          >
+        </div>
+      </div>
+    </div> -->
+
+<!-- seperator -->
+<!-- <div class="row">
+      <div class="col"><hr /></div>
+    </div> -->
+
+<!-- adress form portion -->
+<!-- ngModelGroup is the concept of groupism and we assign variable value  -->
+
+<!-- <div class="row" ngModelGroup="address">
+      <div class="col-12">
+        <label for="" class="form-check-inline">choose Type</label>
+        <div class="form-check form-check-inline">
+          <input
+            type="radio"
+            class="form-check-input"
+            id="inlineRadio1"
+            ngModel
+            name="addressType"
+          />
+          <label for="inlineRadio1" class="form-check-label">Permanent</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            type="radio"
+            class="form-check-input"
+            id="inlineRadio2"
+            ngModel
+            name="addressType"
+          />
+          <label for="inlineRadio2" class="form-check-label"
+            >Correspondance</label
+          >
+        </div>
+        <small class="form-check-inline form-text custom-invalid-feedback"
+          >Pick one option</small
+        >
+      </div>
+      <div class="col-12">
+        <div class="form-group">
+          <label for="addText">Street Address</label>
+          <input
+            type="text"
+            class="form-control"
+            id="addText"
+            placeholder="Enter street address"
+            ngModel
+            name="streetAddress"
+          />
+          <small class="form-text custom-invalid-feedback"
+            >Field is required</small
+          >
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="city">City</label>
+              <input
+                type="text"
+                class="form-control"
+                id="city"
+                placeholder="Enter City"
+                ngModel
+                name="city"
+              />
+              <small class="form-text custom-invalid-feedback"
+                >Field is required</small
+              >
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="state">State</label>
+              <select id="form-control" ngModel name="state">
+                <option selected value="">Choose</option>
+                <option *ngFor="let item of states" [value]="item">
+                  {{ item }}
+                </option>
+              </select>
+
+              <small class="form-text custom-invalid-feedback"
+                >Field is required</small
+              >
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="zipcode">Zip Code</label>
+              <input
+                type="text"
+                class="form-control"
+                id="zipcode"
+                placeholder="Enter Zip Code"
+                ngModel
+                name="zipcode"
+              />
+              <small class="form-text custom-invalid-feedback"
+                >Field is required</small
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+<!-- seperator -->
+<!-- <div class="row">
+      <div class="col">
+        <hr />
+      </div>
+    </div> -->
+
+<!-- final action buttons -->
+
+<!-- <div class="row justify-content-center">
+      <div class="col-2">
+        <button
+          class="btn btn-primary"
+          type="button"
+          (click)="submitHandler(myForm)"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+  </form>
+
+  <form action="" #myForm1="ngForm">
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>contact No</th>
+            <th>Is Paid</th>
+            <th>action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let student of students; let i = index">
+            <td>
+              <div *ngIf="student.isEdit">
+                <input
+                  type="text"
+                  [(ngModel)]="student.Fullname"
+                  class="form-control"
+                />
+              </div>
+              <div *ngIf="!student.isEdit">
+                {{ student.Fullname }}
+              </div>
+            </td>
+         <td>{{ student.Fullname }}</td> -->
+<!-- <td>
+              <div *ngIf="student.isEdit">
+                <input
+                  type="text"
+                  [(ngModel)]="student.Email"
+                  class="form-control"
+                />
+              </div>
+              <div *ngIf="!student.isEdit">
+                {{ student.Email }}
+              </div>
+            </td>
+            <td>
+              <div *ngIf="student.isEdit">
+                <input
+                  type="text"
+                  [(ngModel)]="student.Email"
+                  class="form-control"
+                />
+              </div>
+              <div *ngIf="!student.isEdit">
+                {{ student.ContactNo }}
+              </div>
+            </td>
+            <td>
+              <div *ngIf="student.isEdit">
+                <input
+                  type="text"
+                  [(ngModel)]="student.IsPaid"
+                  class="form-control"
+                />
+              </div>
+              <div *ngIf="!student.isEdit">
+                <input type="checkbox" />
+                <label> {{ student.IsPaid ? "Yes" : "No" }} </label>
+              </div> -->-->
+
+<!-- <input type="checkbox" />
+              <label>{{ student.IsPaid ? "Yes" : "No" }}</label> -->
+<!-- </td>
+            <td>
+              <button class="btn btn-danger" (click)="deleteStudent(i)">
+                Deletes
+              </button>
+            </td>
+
+            <td>
+              <div *ngIf="student.isEdit">
+                <button class="btn btn-sucess" (click)="updateStudent(studentw)">
+                  Update
+                </button>
+                <button class="btn btn-danger" (click)="student.isEdit = false">
+                  Cancel
+                </button>
+              </div>
+              <div>
+                <button class="btn btn-light" (click)="editStudent(student)">
+                  Edit
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div> -->
+<!-- 
+    <div>
+      <label for="fullname">Fullname:</label>
+      <input
+        type="text"
+        id="fullname"
+        name="fullname"
+        [(ngModel)]="nayaStudent.Fullname"
+      />
+
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        [(ngModel)]="nayaStudent.Email"
+      />
+
+      <label for="contactno">Contact No:</label>
+      <input
+        type="tel"
+        id="contactno"
+        name="contactno"
+        [(ngModel)]="nayaStudent.ContactNo"
+      />
+
+      <label for="ispaid">Is Paid:</label>
+      <input
+        type="checkbox"
+        id="ispaid"
+        name="ispaid"
+        [(ngModel)]="nayaStudent.IsPaid"
+      />
+
+      <button class="btn btn-primary" (click)="addDo()">Add Student</button>
+    </div>
+  </form> -->
+<!-- </div> -->
+<!-- </form> -->
